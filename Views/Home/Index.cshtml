@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ConsumeWebApi.Models.SamplePost>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container-fluid">
+
+<table class="table table-bordered">
+    <thead class="bg-primary">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.userId )
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id )
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.title )
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.body )
+            </th>
+        </tr>
+    </thead>
+    <tbody >
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.userId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.body)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
